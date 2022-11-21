@@ -393,8 +393,8 @@ do
     --
     function library:New(info)
 	local info = info or {}
-        local name = info.name or info.Name or "aftertime"
-        local title = info.title or info.Title or "aftertime"
+        local name = info.name or info.Name or "revision"
+        local title = info.title or info.Title or "revision"
         local size = info.size or info.Size or Vector2.new(504,604)
         local accent = info.accent or info.Accent or info.color or info.Color or theme.accent
         --
@@ -783,7 +783,7 @@ do
             --
             spawn(function()
                 while wait(0.1) do
-                    watermark_title.Text = string.format("aftertime | Public Test Build | Ping : " .. tostring(library.shared.ping) .. "ms | FPS : " .. tostring(library.shared.fps), window.name)
+                    watermark_title.Text = string.format("revision | Private Test Build | Ping : " .. tostring(library.shared.ping) .. "ms | FPS : " .. tostring(library.shared.fps), window.name)
                     window.watermark:UpdateSize()
                 end
             end)
